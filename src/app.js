@@ -47,7 +47,7 @@ app.put("/repositories/:id", validarUuid, (request, response,) => {
 
     repositories[repositoreIndex] = {...repositore, title, url, techs};
 
-    return response.json(repositore);
+    return response.json(repositories[repositoreIndex]);
 });
 
 app.delete("/repositories/:id", validarUuid, (request, response) => {
